@@ -34,7 +34,7 @@ public class FrameworkTest extends TestBase {
      */
     @DataProvider(name = "EventDataProvider")
     public Object[][] getEventData() {
-        return DataProviderUtil.getJsonDataToMap("\\src\\test\\resources\\events.json");
+        return DataProviderUtil.getJsonDataToMap("//src//test//resources//events.json");
     }
 
     /**
