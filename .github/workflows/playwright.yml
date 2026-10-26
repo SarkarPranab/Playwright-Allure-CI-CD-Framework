@@ -46,7 +46,7 @@ jobs:
         run: mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
 
       - name: Run Tests
-        run: mvn test -Dbrowser=${{ github.event.inputs.browser || 'chrome' }} -Denv=${{ github.event.inputs.environment || 'qa' }}
+        run: mvn test -Psmoke -Dbrowser=${{ github.event.inputs.browser || 'chrome' }} -Denv=${{ github.event.inputs.environment || 'qa' }}
 
       - name: Upload Allure Results Artifact
         uses: actions/upload-artifact@v4
