@@ -23,7 +23,7 @@
 
 A test automation framework built from scratch with **Java 21**, **Microsoft Playwright** and **TestNG**, using the Page Object Model. Test results are collected with **Allure**, and every push is built and tested by **GitHub Actions**.
 
-> **Application under test:** _add the site URL here_
+> **Application under test:** https://eventhub.rahulshettyacademy.com/
 
 ---
 
