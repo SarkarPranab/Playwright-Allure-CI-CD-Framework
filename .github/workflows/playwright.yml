@@ -2,9 +2,9 @@ name: Playwright Tests
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ master ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ master ]
   workflow_dispatch:
     inputs:
       browser:
@@ -48,23 +48,20 @@ jobs:
       - name: Run Tests
         run: mvn test -Dbrowser=${{ github.event.inputs.browser || 'chrome' }} -Denv=${{ github.event.inputs.environment || 'qa' }}
 
-      - name: Get Allure History / Results
+      - name: Upload Allure Results Artifact
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: allure-results
           path: target/allure-results/
 
-      - name: Generate Allure Report
-        uses: simple-elf/allure-report-action@master
+      - name: Generate Allure Report Natively
         if: always()
-        id: allure-report
-        with:
-          allure_results: target/allure-results
-          allure_report: allure-report
-          keep_reports: 20
+        run: |
+          sudo npm install -g allure-commandline --unsafe-perm=true
+          allure generate target/allure-results -o allure-report --clean
 
-      - name: Upload Allure Report Artifact
+      - name: Upload Allure Report HTML Artifact
         uses: actions/upload-artifact@v4
         if: always()
         with:
