@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="TestNG Suite">
+    <!--
+      Author: Pranab Sarkar
+      LinkedIn: https://www.linkedin.com/in/pranabsarkar/
+      Portfolio: https://pranabsarkar.vercel.app/
+      Since: 2026-10-26
+    -->
+    <!--varbose for level of logging you want
+    parrlel for how you want to run the tests, classes, methods, etc. in parallel mode
+    thread-count for how many threads you want to run in parallel-->
+
+    <test name="TestNG Test" varbose="5" parallel="classes" thread-count="2">
+<!--        In case you want to run from specific groups, you can specify them here. which should be the same as the group name in the test class.-->
+
+  <!--      <groups>
+            <run>
+                <include name="group1" />
+                <include name="group2" />
+            </run>
+        </groups>-->
+
+<!--        In case you want to run specific test classes, you can specify them here.-->
+
+        <classes>
+            <class name="tests.FrameworkTest" />
+        </classes>
+    </test>
+</suite>

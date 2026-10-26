@@ -1,0 +1,32 @@
+[
+  {
+    "titlePrefix": "Event 1",
+    "description": "Description for Event 1",
+    "city": "Hyderabad",
+    "category": "Festival",
+    "venue": "HICC Convention Center",
+    "dateTime": "2027-07-15T18:00",
+    "price": "150",
+    "totalSeats": "200",
+    "fullName": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "123-456-7890",
+    "seatToBook": "5",
+    "imgUrl": "https://www.awardspace.com/wp-content/uploads/2024/05/how-to-update-drupal-core-featured-image.jpeg"
+  },
+  {
+    "titlePrefix": "Event 2",
+    "description": "Description for Event 2",
+    "city": "Chennai",
+    "category": "Festival",
+    "venue": "Golden gate Convention Center",
+    "dateTime": "2027-05-15T18:00",
+    "price": "160",
+    "totalSeats": "250",
+    "fullName": "Jane Doe",
+    "email": "jane.doe@example.com",
+    "phone": "123-456-9780",
+    "seatToBook": "7",
+    "imgUrl": "https://www.awardspace.com/wp-content/uploads/2024/05/how-to-update-drupal-core-featured-image.jpeg"
+  }
+]
